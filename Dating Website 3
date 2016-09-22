@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="author" content="Siyu Bao">
+		<title>Dating Website Personal Information</title>
+		<style>
+			label:hover { font-size:20px }
+			
+			fieldset{
+			background: lightyellow; 
+			border: 10px solid yellow; 
+			margin-bottom: 10px; 
+			width: 720px; 
+			padding: 10px;
+			line-height: 150%;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			}
+			
+			label.ratio, label.checkbox{
+			width:auto;
+			}
+			
+			label{
+			width: 180px; 
+			display: inline-block; 
+			text-align: right; 
+			vertical-align: top;
+			padding: 4px;
+			}
+			
+			textarea{
+			width: 360px; 
+			height: 50px;
+			}
+			
+			mark#left{
+			text-align: center; 
+			background-color: mediumvioletred; 
+			color: white;
+			height: 20px;
+			width: 60px;
+			padding: 5px 2px;
+			}
+			
+			mark#right{
+			text-align: center; 
+			background-color: purple; 
+			color: white;
+			height: 20px;
+			width: 60px;
+			padding: 5px 2px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+		<form method="post" action="https://ihome.ust.uk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Your Face</legend>
+				<div id="image">
+					<label for="avatar">Your Image:</label>
+					<img id="preview" width="10%" height="10%">
+					<input type="file" id="avatar" name="avatar" required><br>
+					<label id="view">Image Preview:</label>
+				</div>
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your General Details</legend>
+				<div id="details">
+					<label for="name">Name:</label>
+					<input type="text" name="name" id="name" placeholder="Your Full Name" required><br>
+					
+					<label for="gender" class="radio">Gender:</label>
+					<input type="radio" id="gender" name="gender" value="Male" required>Male 
+					<input type="radio" id="gender" name="gender" value="Female">Female<br>
+					
+					<label for="age">Age:</label>
+					<input type="number" min="0" max="99" step="1" id="age" name="age" required><br>
+					
+					<label for="birth">Date of Birth:</label>
+					<input type="date" id="birth" name="birth"><br>
+					
+					<label for="color">Favorite Color:</label>
+					<input type="color" id="color" name="color"><br>
+					
+					<label for="country">Which Country:</label>
+					<select name="country" id="country">
+						<option value="us">United States</option>
+						<option value="uk">United Kingdom</option>
+						<option value="ch">China</option>
+						<option value="kr">Korea</option>
+						<option value="me">Mexico</option>
+						<option value="na">No Selection</option>
+					</select>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your Indicators</legend>
+				<div id="indicators">
+					<label class="range" for="height">Height:</label> 
+					<mark id="left">Short</mark>
+					<input type="range" id="height" name="height" min="0" max="100">
+					<mark id="right">Tall</mark><br>
+					
+					<label class="range" for="salary">Salary:</label>
+					<mark id="left">Poor</mark>
+					<input type="range" id="salary" name="salary" min="0" max="100">
+					<mark id="right">Rich</mark>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Your Contact Information</legend>
+				<div id="info">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br>
+					
+					<label for="phone">Mobile:</label>
+					<input type="tel" id="phone" name="phone"><br>
+					
+					<label for="address">Address:</label>
+					<textarea id="address" name="address"></textarea><br>
+					
+					<label for="contact">Method to Contact You:</label>
+					<input type="checkbox" id="contact" name="contact" value="email">Email
+					<input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
+					<input type="checkbox" id="contact" name="contact" value="inapp">In-app chat
+				</div>
+			</fieldset>
+			
+			<input type="submit">
+			
+		</form>
+	
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+		
+	</body>
+
+
+</html>
